@@ -12,9 +12,10 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 @RestControllerAdvice
-public class ErroValidacaoHandler {
+public class ErroValidacaoHandler{
 	
 	@Autowired
 	private MessageSource messageSource;
@@ -26,9 +27,15 @@ public class ErroValidacaoHandler {
 		List<FieldError> fieldErrors = exception.getBindingResult().getFieldErrors();
 		fieldErrors.forEach(e -> {
 			String mensagem = messageSource.getMessage(e, LocaleContextHolder.getLocale());
+			
 			ErroFormularioDto erro = new ErroFormularioDto( e.getField(), mensagem);
 			erroDto.add(erro);
 		});
 		return erroDto;
 	}
+	
+	@ResponseStatus(code = HttpStatus.BAD_REQUEST)
+	@ExceptionHandler(NumberFormatException.class)
+	public void erroTypeFormat(NumberFormatException exception) {
+	}	
 }
