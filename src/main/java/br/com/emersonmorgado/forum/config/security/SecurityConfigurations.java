@@ -19,7 +19,7 @@ import br.com.emersonmorgado.forum.repository.UsuarioRepository;
 
 @EnableWebSecurity
 @Configuration
-@Profile("prod")
+@Profile({"prod","test"})
 public class SecurityConfigurations extends WebSecurityConfigurerAdapter{
 	
 	@Autowired

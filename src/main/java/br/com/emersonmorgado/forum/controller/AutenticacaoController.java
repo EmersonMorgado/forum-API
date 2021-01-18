@@ -20,7 +20,7 @@ import br.com.emersonmorgado.forum.controller.form.LoginForm;
 
 @RestController
 @RequestMapping("/auth")
-@Profile("prod")
+@Profile({"prod","test"})
 public class AutenticacaoController {
 	
 	@Autowired
