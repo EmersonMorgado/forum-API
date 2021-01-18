@@ -1,4 +1,6 @@
 INSERT INTO USUARIO(nome, email, senha) VALUES('Aluno', 'aluno@email.com', '$2a$10$20dVjL/E4xqhStJwZlMFO.ZRvtL5qkFTfZVnBVprwH9kpF/eAy.wu');
+INSERT INTO USUARIO(nome, email, senha) VALUES('Moderador', 'moderador@email.com', '$2a$10$20dVjL/E4xqhStJwZlMFO.ZRvtL5qkFTfZVnBVprwH9kpF/eAy.wu');
+
 
 INSERT INTO CURSO(nome, categoria) VALUES('Spring Boot', 'Programação');
 INSERT INTO CURSO(nome, categoria) VALUES('HTML 5', 'Front-end');
