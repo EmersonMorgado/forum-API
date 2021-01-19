@@ -2,7 +2,6 @@ package br.com.emersonmorgado.forum.controller.dto;
 
 public class TokenDto {
 
-	
 	private String token;
 	private String tipo;
 
