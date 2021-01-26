@@ -21,5 +21,5 @@ Caracteríticas da API
 
 Outras testes realizados:
 - Deploy da aplicação com os arquivos do tipo .jar w .war
-- Utilizaçãod e variáveis de ambiente para perfil de produção
-- Deploy utilizando Docker para criação de imagens e de containers para aplicações que utilizam Java com Spring Boot
+- Utilização de variáveis de ambiente para perfil de produção
+- Deploy utilizando Docker e docker-composer 
